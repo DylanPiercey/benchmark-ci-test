@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  deployments: write
+  contents: write
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.event_name == 'pull_request_target' && github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Use node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Bench
+        run: npm run @ci:bench
+      - name: Store benchmark result
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          auto-push: true
+          benchmark-data-dir-path: bench
+          fail-on-alert: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          name: Marko Benchmarks
+          output-file-path: dist/benchmark.json
+          tool: customSmallerIsBetter

@@ -1,0 +1,22 @@
+{
+  "name": "benchmark-ci-test",
+  "private": true,
+  "scripts": {
+    "@ci:bench": "tsx --expose-gc --allow-natives-syntax bench.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DylanPiercey/benchmark-ci-test.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/DylanPiercey/benchmark-ci-test/issues"
+  },
+  "homepage": "https://github.com/DylanPiercey/benchmark-ci-test#readme",
+  "devDependencies": {
+    "@mitata/counters": "^0.0.8",
+    "@types/node": "^22.13.5",
+    "mitata": "^1.0.34",
+    "tsx": "^4.19.3"
+  }
+}
