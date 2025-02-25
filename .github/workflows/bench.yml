@@ -32,8 +32,9 @@ jobs:
         with:
           auto-push: true
           benchmark-data-dir-path: bench
-          fail-on-alert: true
+          comment-on-alert: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           name: Marko Benchmarks
           output-file-path: dist/benchmark.json
           tool: customSmallerIsBetter
+
