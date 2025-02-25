@@ -15,9 +15,11 @@ b.boxplot(() => {
 
       bench(p0) {
         for (let i = 0; i < keys; i++) {
-          delete p0[i];
-          delete p0[i];
-          delete p0[i];
+          for (let j = 10; j--;) {
+            delete p0[i];
+            delete p0[i];
+            delete p0[i];
+          }
         }
       },
     };
