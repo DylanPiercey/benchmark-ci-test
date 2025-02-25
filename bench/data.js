@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1740453558875,
+  "lastUpdate": 1740453703612,
   "repoUrl": "https://github.com/DylanPiercey/benchmark-ci-test",
   "entries": {
     "Marko Benchmarks": [
@@ -144,6 +144,54 @@ window.BENCHMARK_DATA = {
             "value": 106528.88954815154,
             "unit": "ns/iter",
             "range": "(102121 ns … 208230 ns)"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dpiercey@ebay.com",
+            "name": "dpiercey",
+            "username": "DylanPiercey"
+          },
+          "committer": {
+            "email": "dpiercey@ebay.com",
+            "name": "dpiercey",
+            "username": "DylanPiercey"
+          },
+          "distinct": true,
+          "id": "0f41e1287f65088f00714eedcc025b34e6d84ff6",
+          "message": "chore: even slower",
+          "timestamp": "2025-02-24T20:21:19-07:00",
+          "tree_id": "eb0e37559d0ef593fc096fc12e24cc9d31f94e6e",
+          "url": "https://github.com/DylanPiercey/benchmark-ci-test/commit/0f41e1287f65088f00714eedcc025b34e6d84ff6"
+        },
+        "date": 1740453703340,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "deleting 1 from object",
+            "value": 790.446002512475,
+            "unit": "ns/iter",
+            "range": "(779.2460937501164 ns … 1132.86865234375 ns)"
+          },
+          {
+            "name": "deleting 10 from object",
+            "value": 7836.137179904514,
+            "unit": "ns/iter",
+            "range": "(7793.20556640625 ns … 8194.98388671875 ns)"
+          },
+          {
+            "name": "deleting 100 from object",
+            "value": 82339.13544736532,
+            "unit": "ns/iter",
+            "range": "(79347 ns … 167712 ns)"
+          },
+          {
+            "name": "deleting 1000 from object",
+            "value": 812326.8877314815,
+            "unit": "ns/iter",
+            "range": "(797650 ns … 1087758 ns)"
           }
         ]
       }
