@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1740453400936,
+  "lastUpdate": 1740453558875,
   "repoUrl": "https://github.com/DylanPiercey/benchmark-ci-test",
   "entries": {
     "Marko Benchmarks": [
@@ -96,6 +96,54 @@ window.BENCHMARK_DATA = {
             "value": 107332.37848605578,
             "unit": "ns/iter",
             "range": "(104395 ns … 190826 ns)"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dpiercey@ebay.com",
+            "name": "dpiercey",
+            "username": "DylanPiercey"
+          },
+          "committer": {
+            "email": "dpiercey@ebay.com",
+            "name": "dpiercey",
+            "username": "DylanPiercey"
+          },
+          "distinct": true,
+          "id": "4baeabd80ddbd907f55fb4efcc5ff90ac838b9df",
+          "message": "chore: make slower",
+          "timestamp": "2025-02-24T20:18:51-07:00",
+          "tree_id": "c284e4b10b3bc2bd46bd92d4d71d777e2f5e8518",
+          "url": "https://github.com/DylanPiercey/benchmark-ci-test/commit/4baeabd80ddbd907f55fb4efcc5ff90ac838b9df"
+        },
+        "date": 1740453558098,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "deleting 1 from object",
+            "value": 96.04117614643133,
+            "unit": "ns/iter",
+            "range": "(93.41943359375 ns … 171.407470703125 ns)"
+          },
+          {
+            "name": "deleting 10 from object",
+            "value": 925.9184020325378,
+            "unit": "ns/iter",
+            "range": "(914.226318359375 ns … 1021.54150390625 ns)"
+          },
+          {
+            "name": "deleting 100 from object",
+            "value": 10692.259221003605,
+            "unit": "ns/iter",
+            "range": "(10653.779541015625 ns … 10807.152587890625 ns)"
+          },
+          {
+            "name": "deleting 1000 from object",
+            "value": 106528.88954815154,
+            "unit": "ns/iter",
+            "range": "(102121 ns … 208230 ns)"
           }
         ]
       }
